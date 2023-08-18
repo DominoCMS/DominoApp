@@ -1,0 +1,19 @@
+$dim-level: 0.3;
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, $dim-level), rgba(0, 0, 0, $dim-level)), url("https://cdn.myportfolio.com/abbfbb55-d1ce-4357-b303-3d746cc02606/af5d0c99-6a9d-4e4c-b5e7-584aae66aa8c_rw_1920.jpg?h=cfa6c3e61332472c5249363a97d2636d");
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  text-align: center;
+  color: white;
+  font-family: 'teletactile', sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

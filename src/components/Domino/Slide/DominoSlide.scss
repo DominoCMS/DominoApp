@@ -1,0 +1,128 @@
+.domino_body_theme-#{$theme} {
+
+
+  .dc_domino_slide {
+
+    &.t1 {
+      background: map-deep-get($d, small,  background);
+      background-color: map-deep-get($d, small, background-color);
+
+      .overlay {
+        background-color: map-deep-get($d, small, '.overlay', background-color);
+
+        &:hover {
+          background-color: map-deep-get($d, small, '.overlay', '&:hover', background-color);
+        }
+      }
+
+      h2 {
+        color: map-deep-get($d, small, h2, color);
+      }
+
+      a {
+        color: map-deep-get($d, small, a, color);
+
+        .more {
+          color: map-deep-get($d, small, a, '.more', color);
+        }
+
+        &:hover {
+          color: map-deep-get($d, small, a, '&:hover', color);
+
+          .more {
+            color: map-deep-get($d, small, a, '&:hover', '.more', color);
+          }
+        }
+
+      }
+
+      h3 {
+        color: map-deep-get($d, small, h3, color);
+      }
+
+      h4 {
+        color: map-deep-get($d, small, h4, color);
+      }
+
+      h5 {
+        color: map-deep-get($d, small, h5, color);
+
+      }
+
+    }
+
+  }
+
+}
+
+$d: (
+        small: (
+          //background: radial-gradient($neutral-color, $neutral-color),
+                background-color: $neutral-color,
+                transition: all 0.3s Ease-In-Out,
+                text-align: left,
+                '.overlay': (
+                        background-color: rgba($neutral-color, 0.5),
+                        padding: 0,
+                        '&:hover': (
+                                background-color: rgba($neutral-color, 0.5),
+                        )
+                ),
+                a: (
+                        color: #FFF,
+                        '.more': (
+                                color: $primary-color,
+                                margin: 0 0 0 10px
+                        ),
+                        '&:hover': (
+                                color: rgba(#FFF, 0.5),
+                                margin: 0 0 0 10px,
+                                '.more': (
+                                        color: rgba($primary-color, 0.5),
+                                ),
+                        )
+                ),
+                h2: (
+                        color: #FFF,
+                        text-transform: uppercase,
+                        margin: 0 0 0.5em 0,
+                        font-family: $font-family-main,
+                        font-size: 3em,
+                        line-height: 1em,
+
+                ),
+                h3: (
+                        color: $primary-color,
+                        letter-spacing: 0,
+                        text-transform: uppercase,
+                        margin: 0 0 0.5em 0,
+                        font-family: $font-family-main,
+                        font-size: 1.7em,
+                        line-height: 1em,
+                ),
+                h4: (
+                        color: rgba(#FFF, 0.5),
+                        letter-spacing: 0,
+                        text-transform: none,
+                        margin: 0,
+                        font-family: $font-family-main,
+                        font-size: 1.2em,
+                        line-height: 1em,
+                ),
+                h5: (
+                        color: $primary-color,
+                        letter-spacing: 5px,
+                        text-transform: uppercase,
+                        margin: 0 0 0.5em 0,
+                        font-family: $font-family-main,
+                        font-size: 1.3em,
+                        line-height: 1em,
+                )
+        ),
+        medium: (
+
+        ),
+        large: (
+
+        )
+);

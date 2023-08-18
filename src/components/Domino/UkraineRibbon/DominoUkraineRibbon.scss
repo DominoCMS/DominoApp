@@ -1,0 +1,101 @@
+$d: (
+        small: (
+                position: fixed,
+                top: auto,
+                bottom: 0,
+                left: auto,
+                right: 0,
+                width: 100px,
+                height: 100px,
+                div: (
+                        width: 150px,
+                        height: 40px,
+                        background-color: transparent,
+                        color: #FFF,
+                        top: 0,
+                        bottom: auto,
+                        left: auto,
+                        right: 0,
+                        padding: 0 2em,
+                        transform: rotate(-45deg) translateY(100%) rotate(-45deg) translateX(20%) rotate(45deg),
+                        transform-origin: bottom right
+                )
+        ),
+        large: (
+                width: 100px,
+                height: 100px,
+                div: (
+                        width: 150px,
+                        height: 40px
+                )
+        )
+);
+
+.dc_domino_ukraine_ribbon {
+  z-index: 1000000;
+  position: map-deep-get($d, small, position);
+  //pointer-events: none;
+  top: map-deep-get($d, small, top);
+  bottom: map-deep-get($d, small, bottom);
+  left: map-deep-get($d, small, left);
+  right: map-deep-get($d, small, right);
+  width: map-deep-get($d, small, width);
+  height: map-deep-get($d, small, height);
+  overflow: hidden;
+
+  > a {
+    transition: all 0.2s Ease-In-Out;
+    display: block;
+    width: map-deep-get($d, small, div, width);
+    height: map-deep-get($d, small, div, height);
+    background-color: map-deep-get($d, small, div, background-color);
+    position: absolute;
+    top: map-deep-get($d, small, div, top);
+    bottom: map-deep-get($d, small, div, bottom);
+    left: map-deep-get($d, small, div, left);
+    right: map-deep-get($d, small, div, right);
+    padding: map-deep-get($d, small, div, padding);
+    transform: map-deep-get($d, small, div, transform);
+    transform-origin: map-deep-get($d, small, div, transform-origin);
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+
+    .stripe1 {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      background-color: #369;
+      top: 0;
+      left: 0;
+    }
+
+    .stripe2 {
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      background-color: #FE0;
+      top: 50%;
+      left: 0;
+    }
+
+  }
+
+
+}
+
+@media screen and (min-width: $break-large) {
+
+  .dc_domino_ukraine_ribbon {
+    width: map-deep-get($d, large, width);
+    height: map-deep-get($d, large, height);
+
+    > a {
+      width: map-deep-get($d, large, div, width);
+      height: map-deep-get($d, large, div, height);
+    }
+
+  }
+}

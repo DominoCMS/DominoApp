@@ -1,0 +1,14 @@
+// Use '@import' instead of '@use'
+// (Vite does not support it)
+
+// Import all globals here
+@import 'assets/css/globals';
+@import 'assets/css/functions';
+@import 'assets/css/settings';
+@import 'assets/css/component';
+
+html, body, div,
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}

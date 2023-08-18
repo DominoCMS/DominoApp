@@ -1,0 +1,105 @@
+.domino-site-index-blocks {
+  position: relative;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: map-deep-get($d, small, margin-bottom);
+
+  div[view="Domino.App.Block.Bit"] {
+    display: contents;
+  }
+
+
+  .fs-large {
+    font-size: 2em;
+  }
+
+  .text-center, .text-right {
+    ul {
+      list-style-position: inside;
+      margin-left: 0;
+    }
+  }
+
+  .bg-height {
+    height: 300px !important;
+  }
+
+  .bg-cover {
+    display: block;
+    position: absolute;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    img {
+      display: none;
+      position: relative;
+    }
+  }
+
+  img {
+    width: 100%;
+    position: relative;
+  }
+
+  .pic-center {
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .icon-big {
+    max-width: 100px;
+  }
+
+  &.hover:hover {
+    background-color: rgba(#000, 0.03);
+  }
+
+  >.overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .columns-header {
+    margin-bottom: 1.5em;
+  }
+
+  .ico {
+    box-sizing: border-box;
+    padding: map-deep-get($d, small, '.ico', padding);
+    height: map-deep-get($d, small, '.ico', height);
+    margin: map-deep-get($d, small, '.ico', margin);
+
+    svg {
+      height: 100% !important;
+      width: 100% !important;
+    }
+  }
+}
+
+@media screen and (min-width: $break-medium) {
+
+  .domino-site-index-blocks {
+
+    .bg-height {
+      height: auto !important;
+    }
+  }
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}

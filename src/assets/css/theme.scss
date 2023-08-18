@@ -1,0 +1,128 @@
+.domino_body_theme-#{$theme} {
+
+  .domino-site-index-blocks#{$instance} {
+    background-color: map-deep-get($d, small, background-color);
+
+    $tags: div p h1 h2 h3 h4 h5 h6 footer '.meta' '.icon';
+    $attributes: (color);
+    @each $tag in $tags {
+
+      #{$tag} {
+
+        @each $attr in $attributes {
+          #{$attr}: map-deep-get($d, small, #{$tag}, #{$attr});
+        }
+      }
+    }
+
+    a:not(.button) {
+      color: map-deep-get($d, small, a, color);
+
+      &:hover {
+        color: map-deep-get($d, small, a, '&:hover', color);
+      }
+
+      &:active {
+        color: map-deep-get($d, small, a, '&:active', color);
+      }
+    }
+
+    > .overlay {
+      background-color: map-deep-get($d, small, '.overlay', background-color);
+    }
+
+    > .bg {
+      background-color: map-deep-get($d, small, '.bg', background-color);
+    }
+
+    .ico, .side-icon {
+
+      svg {
+        fill: map-deep-get($d, small, '.icon', color);
+      }
+
+      a:hover {
+        svg {
+          fill: map-deep-get($d, small, '.icon', '&:hover', color);
+        }
+      }
+    }
+
+    span[class^="icon-"] {
+      color: map-deep-get($d, small, '.icon', color);
+    }
+
+    table {
+
+      thead {
+        color: map-deep-get($d, small, table, thead, color);
+        background-color: map-deep-get($d, small, table, thead, background-color);
+
+        tr {
+          border-bottom: map-deep-get($d, small, table, thead, border-bottom);
+        }
+      }
+
+      tbody {
+        color: map-deep-get($d, small, table, tbody, color);
+        background-color: map-deep-get($d, small, table, tbody, background-color);
+
+        tr {
+          background-color: map-deep-get($d, small, table, tbody, background-color);
+          border-bottom: map-deep-get($d, small, table, tbody, border-bottom);
+        }
+
+        tr:nth-child(even) {
+          background-color: map-deep-get($d, small, table, tbody, 'even', background-color);
+        }
+
+      }
+
+      th {
+        background-color: map-deep-get($d, small, table, thead, th, background-color);
+      }
+
+      td {
+        background-color: map-deep-get($d, small, table, tbody, td, background-color);
+      }
+    }
+
+
+    .dc_domino_module {
+
+      > header {
+        background-color: map-deep-get($d, small, 'module', header, background-color);
+        -moz-box-shadow: map-deep-get($d, small, 'module', header, box-shadow);
+        -webkit-box-shadow: map-deep-get($d, small, 'module', header, box-shadow);
+        box-shadow: map-deep-get($d, small, 'module', header, box-shadow);
+
+        h2 {
+          color: map-deep-get($d, small, 'module', header, color);
+        }
+      }
+
+      &.grid {
+
+
+        div {
+          background-color: map-deep-get($d, small, 'module', '&.grid', div, background-color);
+
+          h2 {
+            color: map-deep-get($d, small, 'module', '&.grid', div, h2, color);
+          }
+
+          h3 {
+            color: map-deep-get($d, small, 'module', '&.grid', div, h3, color);
+          }
+
+          h4 {
+            color: map-deep-get($d, small, 'module', '&.grid', div, h4, color);
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
